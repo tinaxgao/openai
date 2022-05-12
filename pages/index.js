@@ -31,6 +31,13 @@ export default function Home() {
 
       <main className={styles.main}>
         <h3>Send a prompt to AI</h3>
+        <div className={styles.graphic}>
+          <span>🐙</span>
+          <div className={styles.chatpointer} />
+          <div className={styles.chatblue}>
+            Hi, I'm Blotty. What can I do for you?
+          </div>
+        </div>
         <form onSubmit={onSubmit}>
           <input
             type="text"

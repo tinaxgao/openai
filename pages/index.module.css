@@ -23,18 +23,39 @@
 .main {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding-top: 60px;
+  /* align-items: center; */
+  padding-top: 30px;
+  border: 1px solid blue;
 }
-.main .icon {
-  width: 34px;
+.main .graphic {
+  font-size: 60px;
 }
+
+.main .chatblue {
+  background-color: steelblue;
+  width: 60%;
+  color: #fff;
+  border-radius: 15px;
+  font-size: 16px;
+  padding: 8px 12px;
+}
+
+.main .chatpointer {
+  background-image: url(/chat-pointer.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+  height: 24px;
+  width: 16px;
+}
+
 .main h3 {
-  font-size: 32px;
-  line-height: 40px;
+  font-size: 18px;
+  line-height: 24px;
   font-weight: bold;
   color: #202123;
   margin: 16px 0 40px;
+  border: 1px solid yellow;
 }
 .main form {
   display: flex;
@@ -63,4 +84,5 @@
 .main .result {
   font-weight: bold;
   margin-top: 40px;
+  border: 1px solid magenta;
 }
