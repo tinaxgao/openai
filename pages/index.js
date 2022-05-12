@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 
 export default function Home() {
   const [textInput, setTextInput] = useState("");
-  const [result, setResult] = useState();
+  const [result, setResult] = useState([]);
 
   async function onSubmit(event) {
     event.preventDefault();
@@ -17,8 +17,9 @@ export default function Home() {
       body: JSON.stringify({ text: textInput }),
     });
     const data = await response.json();
-    setResult(data.result);
+    result.push({ input: textInput, result: data.result });
     setTextInput("");
+    console.log(result); //delete console.log
   }
 
   return (
@@ -40,7 +41,14 @@ export default function Home() {
           />
           <input type="submit" value="Submit" />
         </form>
-        <div className={styles.result}>{result}</div>
+        <div className={styles.result}>
+          {result.map((item) => (
+            <div key={item.input}>
+              <p>Input: {item.input}</p>
+              <p>Result: {item.result}</p>
+            </div>
+          ))}
+        </div>
       </main>
     </div>
   );
