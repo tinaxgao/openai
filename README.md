@@ -3,9 +3,7 @@
 ## Blotty the Chatbot
 Deployed at: https://replit.com/@tinaxgao/openai
 & tg-openai.netlify.app
+Built with React and NextJS & using the OpenAI API.
 
-Blotty is a chatbot using the OpenAI API.
-
-Built with React and NextJS.
-
+### Function
 Send Blotty a prompt as a task or question, and discover its response.
