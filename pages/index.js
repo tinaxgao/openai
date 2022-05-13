@@ -24,7 +24,7 @@ export default function Home() {
     <div>
       <Head>
         <title>Tina's AI Playground</title>
-        <link rel="icon" href="/dog.png" /> //favicon
+        <link rel="icon" href="/squiddy.png" />
       </Head>
 
       <main className={styles.main}>
