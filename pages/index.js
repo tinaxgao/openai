@@ -31,16 +31,16 @@ export default function Home() {
         <h3>Send a prompt to AI</h3>
 
         {/* Intro section */}
-        <div className={styles.graphic}>
-          <span>🐙</span>
+        <section className={styles.graphic}>
+          <figure>🐙</figure>
           <div className={styles.chatpointer} />
-          <div className={styles.chatblue}>
+          <figcaption className={styles.chatblue}>
             Hi, I'm Blotty. What can I do for you?
-          </div>
-        </div>
+          </figcaption>
+        </section>
 
         {/* Inputs & results as a conversation */}
-        <div className={styles.result}>
+        <section className={styles.result}>
           {result.map((item) => (
             <div key={item.input}>
               <p>
@@ -51,7 +51,7 @@ export default function Home() {
               </p>
             </div>
           ))}
-        </div>
+        </section>
 
         {/* User input form */}
         <form onSubmit={onSubmit}>
@@ -64,7 +64,7 @@ export default function Home() {
           />
           <input type="submit" value="Submit" />
         </form>
-        <footer className={styles.footer}>2022 tinagao.com</footer>
+        <footer className={styles.footer}>2022 <a href="https://tinagao.com/projects/">tinagao.com</a></footer>
       </main>
     </div>
   );
