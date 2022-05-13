@@ -45,8 +45,12 @@ export default function Home() {
         <div className={styles.result}>
           {result.map((item) => (
             <div key={item.input}>
-              <p className={styles.chatblue}>Input: {item.input}</p>
-              <p className={styles.chatgray}>Result: {item.result}</p>
+              <p>
+                <span className={styles.chatgray}>{item.input}</span>
+              </p>
+              <p>
+                <span className={styles.chatblue}>{item.result}</span>
+              </p>
             </div>
           ))}
         </div>
@@ -56,12 +60,13 @@ export default function Home() {
           <input
             type="text"
             name="prompt"
-            placeholder="Tell me to do something."
+            placeholder="Tell me to do something or ask me a question."
             value={textInput}
             onChange={(e) => setTextInput(e.target.value)}
           />
           <input type="submit" value="Submit" />
         </form>
+        <footer className={styles.footer}>2022 tinagao.com</footer>
       </main>
     </div>
   );

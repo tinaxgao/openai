@@ -13,6 +13,7 @@
   font-weight: bold;
   font-style: normal;
 }
+
 .main,
 .main input {
   font-size: 16px;
@@ -23,34 +24,51 @@
 .main {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
-  padding-top: 30px;
-  border: 1px solid blue;
+  padding: 30px;
+  align-items: center;
 }
 .main .graphic {
   font-size: 60px;
+  font-weight: bold;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.main .result {
+  margin-top: 40px;
+  height: 65vh;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+.result::-webkit-scrollbar {
+  width: 12px;
+}
+
+.main p {
+  width: 100%;
+  display: flex;
+}
+
 .main .chatblue {
   background-color: steelblue;
-  width: 60%;
+  width: fit-content;
+  max-width: 60%;
   color: #fff;
   border-radius: 15px;
   font-size: 16px;
   padding: 8px 12px;
-  float: left;
 }
 
 .main .chatgray {
   background-color: #f2f2f2;
-  width: 60%;
+  width: fit-content;
+  max-width: 60%;
   border-radius: 15px;
   font-size: 16px;
   padding: 8px 12px;
-  float: right;
+  margin-left: auto;
 }
 
 .main .chatpointer {
@@ -67,17 +85,16 @@
   line-height: 24px;
   font-weight: bold;
   color: #202123;
-  margin: 16px 0 40px;
-  border: 1px solid yellow;
+  margin: 0px 0 40px;
 }
 .main form {
   display: flex;
-  flex-direction: column;
-  width: 320px;
+  width: 100%;
 }
 .main input[type="text"] {
+  width: 85%;
   padding: 12px 16px;
-  border: 1px solid #10a37f;
+  border: 1px solid #3e3e3e;
   border-radius: 4px;
   margin-bottom: 24px;
 }
@@ -87,15 +104,17 @@
 }
 .main input[type="submit"] {
   padding: 12px 0;
+  width: 10%;
   color: #fff;
-  background-color: #10a37f;
+  background-color: #aaaaaa;
   border: none;
-  border-radius: 4px;
+  border-radius: 20px;
+  margin-bottom: 24px;
+  margin-left: 10px;
   text-align: center;
   cursor: pointer;
 }
-.main .result {
-  font-weight: bold;
-  margin-top: 40px;
-  border: 1px solid magenta;
+.main footer {
+  text-align: center;
+  font-size: .75rem;
 }
