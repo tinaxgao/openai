@@ -1,7 +1,6 @@
 import Head from "next/head";
 import { useState } from "react";
 import styles from "./index.module.css";
-import { useRouter } from "next/router";
 
 export default function Home() {
   const [textInput, setTextInput] = useState("");
@@ -19,7 +18,6 @@ export default function Home() {
     const data = await response.json();
     result.push({ input: textInput, result: data.result });
     setTextInput("");
-    console.log(result); //delete console.log
   }
 
   return (
