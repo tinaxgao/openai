@@ -31,6 +31,8 @@ export default function Home() {
 
       <main className={styles.main}>
         <h3>Send a prompt to AI</h3>
+
+        {/* Intro section */}
         <div className={styles.graphic}>
           <span>🐙</span>
           <div className={styles.chatpointer} />
@@ -38,6 +40,18 @@ export default function Home() {
             Hi, I'm Blotty. What can I do for you?
           </div>
         </div>
+
+        {/* Inputs & results as a conversation */}
+        <div className={styles.result}>
+          {result.map((item) => (
+            <div key={item.input}>
+              <p className={styles.chatblue}>Input: {item.input}</p>
+              <p className={styles.chatgray}>Result: {item.result}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* User input form */}
         <form onSubmit={onSubmit}>
           <input
             type="text"
@@ -48,14 +62,6 @@ export default function Home() {
           />
           <input type="submit" value="Submit" />
         </form>
-        <div className={styles.result}>
-          {result.map((item) => (
-            <div key={item.input}>
-              <p>Input: {item.input}</p>
-              <p>Result: {item.result}</p>
-            </div>
-          ))}
-        </div>
       </main>
     </div>
   );
