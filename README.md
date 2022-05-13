@@ -9,5 +9,4 @@ Deployed at: https://replit.com/@tinaxgao/openai
 #### Function
 Send Blotty a prompt as a task or question, and discover its response.
 
-> For examples of what you can ask it, 
-> > see OpenAI's documentation on [prompt design] (https://beta.openai.com/docs/guides/completion/prompt-design).
+> For examples of what you can ask it, see OpenAI's documentation on [prompt design](https://beta.openai.com/docs/guides/completion/prompt-design).
